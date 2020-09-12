@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "QuillStack\\": "src/QuillStack/",
+            "QuillStack\\": "src/QuillStack/"
         }
     },
     "require": {}

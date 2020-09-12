@@ -7,6 +7,6 @@ namespace QuillStack;
 /**
  * Validation failed.
  */
-interface ValidationException extends ValidatorExceptionInterface
+interface ValidationExceptionInterface extends ValidatorExceptionInterface
 {
 }

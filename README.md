@@ -5,5 +5,6 @@
 [![Downloads](https://img.shields.io/packagist/dt/quillstack/validator-interface.svg)](https://packagist.org/packages/quillstack/validator-interface)
 ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/quillstack/validator-interface)
 ![Packagist License](https://img.shields.io/packagist/l/quillstack/validator-interface)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/quillstack/validator-interface/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/quillstack/validator-interface/?branch=master)
 
 Common interface for Validator classes.

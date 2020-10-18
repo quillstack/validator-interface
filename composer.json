@@ -3,6 +3,13 @@
     "description": "Common interface for Validator classes.",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "validator",
+        "php",
+        "validation",
+        "interface",
+        "php7"
+    ],
     "authors": [
         {
             "name": "Radoslaw Ziemniewicz",

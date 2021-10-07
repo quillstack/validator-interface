@@ -10,6 +10,7 @@
         "interface",
         "php8"
     ],
+    "homepage": "https://quillstack.org/",
     "authors": [
         {
             "name": "Radek Ziemniewicz",

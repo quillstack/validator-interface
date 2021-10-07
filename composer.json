@@ -1,0 +1,27 @@
+{
+    "name": "quillstack/validator-interface",
+    "description": "Common interface for Validator classes.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "validator",
+        "php",
+        "validation",
+        "interface",
+        "php8"
+    ],
+    "authors": [
+        {
+            "name": "Radek Ziemniewicz",
+            "email": "radek@quillstack.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "QuillStack\\ValidatorInterface\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.0"
+    }
+}

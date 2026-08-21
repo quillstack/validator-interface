@@ -1,6 +1,6 @@
 # Validator interface
 
-[![Build Status](https://app.travis-ci.com/quillstack/validator-interface.svg?branch=master)](https://app.travis-ci.com/quillstack/validator-interface)
+[![Tests](https://github.com/quillstack/validator-interface/actions/workflows/tests.yml/badge.svg)](https://github.com/quillstack/validator-interface/actions/workflows/tests.yml)
 [![Downloads](https://img.shields.io/packagist/dt/quillstack/validator-interface.svg)](https://packagist.org/packages/quillstack/validator-interface)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=quillstack_validator-interface&metric=ncloc)](https://sonarcloud.io/dashboard?id=quillstack_validator-interface)
 [![StyleCI](https://github.styleci.io/repos/294927453/shield?branch=main)](https://github.styleci.io/repos/294927453?branch=main)

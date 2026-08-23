@@ -29,3 +29,24 @@ jobs:
 
       - name: PHPStan
         run: vendor/bin/phpstan analyse --no-progress
+
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    env:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      # There are no tests to measure here — this package is interfaces — so what is uploaded
+      # is the analysis alone. Without it nothing reports at all, and the last thing SonarCloud
+      # knew about this repository was whatever it read the last time it looked by itself.
+      - name: SonarCloud
+        if: env.SONAR_TOKEN != ''
+        # Reporting, not a gate: a token which has expired should not turn a green suite red.
+        continue-on-error: true
+        uses: SonarSource/sonarqube-scan-action@22918119ff8e1ca75a623e15c8296b6ea4fbe28f # v8.2.1
+        env:
+          SONAR_HOST_URL: https://sonarcloud.io

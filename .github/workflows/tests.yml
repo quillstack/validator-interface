@@ -7,9 +7,11 @@ on:
   # So a run can be asked for without pushing something to ask for it.
   workflow_dispatch:
 
+# This package is interfaces and nothing else. There is no behaviour to run, so there are no
+# tests to run either — saying so beats a job which fails the same way every time.
 jobs:
-  tests:
-    name: PHP ${{ matrix.php }}
+  static-analysis:
+    name: Static analysis
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -21,51 +23,6 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          coverage: none
-
-      - uses: ramsey/composer-install@v3
-
-      - name: Unit tests
-        run: vendor/bin/unit-tests
-
-  coverage:
-    name: Coverage
-    runs-on: ubuntu-latest
-    env:
-      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.3'
-          coverage: none
-
-      - uses: ramsey/composer-install@v3
-
-      - name: Unit tests with coverage
-        run: phpdbg -qrr vendor/bin/unit-tests
-
-      # Only where the token is there, so a fork or a repository without it still passes.
-      - name: SonarCloud
-        if: env.SONAR_TOKEN != ''
-        # Reporting, not a gate: a token which has expired should not turn a green suite red.
-        continue-on-error: true
-        uses: SonarSource/sonarqube-scan-action@v5
-        env:
-          SONAR_HOST_URL: https://sonarcloud.io
-
-  static-analysis:
-    name: Static analysis
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.3'
           coverage: none
 
       - uses: ramsey/composer-install@v3

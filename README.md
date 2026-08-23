@@ -7,7 +7,6 @@
 [![StyleCI](https://github.styleci.io/repos/294927453/shield?branch=main)](https://github.styleci.io/repos/294927453?branch=main)
 [![CodeFactor](https://www.codefactor.io/repository/github/quillstack/validator-interface/badge)](https://www.codefactor.io/repository/github/quillstack/validator-interface)
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=quillstack_validator-interface&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=quillstack_validator-interface)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=quillstack_validator-interface&metric=coverage)](https://sonarcloud.io/summary/new_code?id=quillstack_validator-interface)
 [![Maintainability](https://sonarcloud.io/api/project_badges/measure?project=quillstack_validator-interface&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=quillstack_validator-interface)
 [![Reliability](https://sonarcloud.io/api/project_badges/measure?project=quillstack_validator-interface&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=quillstack_validator-interface)
 [![Security](https://sonarcloud.io/api/project_badges/measure?project=quillstack_validator-interface&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=quillstack_validator-interface)

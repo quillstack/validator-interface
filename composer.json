@@ -34,8 +34,6 @@
         "phpstan/phpstan": "^2.0"
     },
     "scripts": {
-        "test": "unit-tests",
-        "test:coverage": "phpdbg -qrr vendor/bin/unit-tests",
         "stan": "phpstan analyse"
     }
 }

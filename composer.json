@@ -10,7 +10,7 @@
         "interface",
         "php8"
     ],
-    "homepage": "https://quillstack.org/",
+    "homepage": "https://quillstack.org/packages/validator-interface",
     "authors": [
         {
             "name": "Radek Ziemniewicz",

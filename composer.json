@@ -19,7 +19,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Quillstack\\ValidatorInterface\\": "src/"
+            "Quillstack\\ValidatorInterface\\": "src/",
+            "Quillstack\\ValidatorInterface\\Tests\\": "tests/"
         }
     },
     "require": {
@@ -31,9 +32,12 @@
         }
     },
     "require-dev": {
-        "phpstan/phpstan": "^2.0"
+        "phpstan/phpstan": "^2.0",
+        "quillstack/unit-tests": "^0.9"
     },
     "scripts": {
+        "test": "unit-tests",
+        "test:coverage": "phpdbg -qrr ./vendor/bin/unit-tests",
         "stan": "phpstan analyse"
     }
 }

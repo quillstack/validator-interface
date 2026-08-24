@@ -7,6 +7,7 @@
 [![StyleCI](https://github.styleci.io/repos/294927453/shield?branch=main)](https://github.styleci.io/repos/294927453?branch=main)
 [![CodeFactor](https://www.codefactor.io/repository/github/quillstack/validator-interface/badge)](https://www.codefactor.io/repository/github/quillstack/validator-interface)
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=quillstack_validator-interface&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=quillstack_validator-interface)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=quillstack_validator-interface&metric=coverage)](https://sonarcloud.io/summary/new_code?id=quillstack_validator-interface)
 [![Maintainability](https://sonarcloud.io/api/project_badges/measure?project=quillstack_validator-interface&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=quillstack_validator-interface)
 [![Reliability](https://sonarcloud.io/api/project_badges/measure?project=quillstack_validator-interface&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=quillstack_validator-interface)
 [![Security](https://sonarcloud.io/api/project_badges/measure?project=quillstack_validator-interface&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=quillstack_validator-interface)
@@ -20,17 +21,26 @@ One method, and two exception interfaces. Something which validates says so by i
 this, and something which fails validation says so by implementing the other — so a caller can
 tell a value it does not like from a mistake in the code.
 
-### Requirements
+## Why this exists
+
+Validation is the one part of an application that everybody writes differently, and the one part
+that everything else needs to be able to ask about. A request wants to know whether what arrived
+is acceptable; it should not need to know how that was decided.
+
+This is that question as an interface, in its own package, so a package can depend on *something
+validating* without depending on how.
+
+## Requirements
 
 - PHP 8.1 or newer
 
-### Installation
+## Installation
 
 ```shell
 composer require quillstack/validator-interface
 ```
 
-### Usage
+## Usage
 
 ```php
 use Quillstack\ValidatorInterface\ValidatorInterface;
@@ -72,7 +82,7 @@ try {
 }
 ```
 
-### Technical documentation
+## Technical documentation
 
 | Interface | What it means |
 | --- | --- |
@@ -92,6 +102,32 @@ by accident.
 
 There is nothing to run here: a package which only names things has no behaviour to test.
 
-### License
+## Benchmark
+
+**There is nothing here to measure.**
+
+This package is an interface. It has no behaviour of its own, so there is no operation to time
+and no library that does the same nothing to compare it with.
+
+What is worth comparing is an implementation, and the honest place for that table is in whichever
+package implements it rather than here.
+
+## Tests
+
+```shell
+composer test
+composer stan
+```
+
+## The rest of Quillstack
+
+This is one component of [Quillstack](https://github.com/quillstack), a PHP framework which is
+as simple to use as it is strict about what it does.
+
+- [quillstack/framework](https://github.com/quillstack/framework) — where validation runs before a controller
+- [quillstack/server-request](https://github.com/quillstack/server-request) — where a request class declares its own rules
+- [quillstack/storage-interface](https://github.com/quillstack/storage-interface) — the same idea, for files
+
+## License
 
 MIT. See [LICENSE](LICENSE).
